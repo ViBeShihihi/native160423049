@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
+        //https://youtu.be/z48_jggb5sw?si=RXawnrmrGPiqPEnz
         binding.btnTest.setOnClickListener {
 
         }
