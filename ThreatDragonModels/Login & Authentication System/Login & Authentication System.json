@@ -125,7 +125,9 @@
                 "b215acb0-6474-48b6-8eb5-b320fc84be18",
                 "c00507f1-6db7-4e84-a7d2-6b73f75ec900",
                 "661fc611-9132-4d55-b979-fdbd50a8c4ad",
-                "21458cb0-e2d1-4381-8cf2-392ae6692b0a"
+                "21458cb0-e2d1-4381-8cf2-392ae6692b0a",
+                "8bc2cc2e-ffab-463a-a288-d5d038d78ae3",
+                "64597f07-a587-4ad9-9349-1027eb837710"
               ],
               "containedElements": [
                 "d8618bc2-62f5-4706-bcd7-da146761fd0c",
@@ -163,7 +165,9 @@
                 "b215acb0-6474-48b6-8eb5-b320fc84be18",
                 "c00507f1-6db7-4e84-a7d2-6b73f75ec900",
                 "661fc611-9132-4d55-b979-fdbd50a8c4ad",
-                "21458cb0-e2d1-4381-8cf2-392ae6692b0a"
+                "21458cb0-e2d1-4381-8cf2-392ae6692b0a",
+                "8bc2cc2e-ffab-463a-a288-d5d038d78ae3",
+                "64597f07-a587-4ad9-9349-1027eb837710"
               ],
               "containedElements": [
                 "cc4cfc68-0d8f-499f-a460-083149609e23",
@@ -1118,6 +1122,151 @@
             "target": {
               "cell": "4dad5f8b-ce16-4f19-8779-e9128164a33c",
               "port": "1f9ac51a-e8fa-4ac9-ac8c-dde7bc5a7d26"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "dump akun",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "3988fc87-c159-4c56-994d-45367cdd9ab8",
+                  "title": "broken access",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "fdbeaff5-c2ae-487e-8e0f-141cae19db16",
+                "5a2a8ba1-0c3e-4368-8a27-2f10f60c88fc"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "dump akun"
+            ],
+            "id": "8bc2cc2e-ffab-463a-a288-d5d038d78ae3",
+            "source": {
+              "cell": "e488d0bb-ac28-4c24-b7d3-593e5dc17e7f",
+              "port": "1c8ebdf7-e342-4957-b6e2-391582378ea3"
+            },
+            "target": {
+              "cell": "cc4cfc68-0d8f-499f-a460-083149609e23",
+              "port": "b180bd51-ec3f-4c74-a42d-e13ef1915d44"
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 430
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "dump PII",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2bb8a850-7e49-4cef-8e77-60a521970b5d",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "fdbeaff5-c2ae-487e-8e0f-141cae19db16",
+                "5a2a8ba1-0c3e-4368-8a27-2f10f60c88fc"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "dump PII"
+            ],
+            "id": "64597f07-a587-4ad9-9349-1027eb837710",
+            "source": {
+              "cell": "e488d0bb-ac28-4c24-b7d3-593e5dc17e7f",
+              "port": "1c8ebdf7-e342-4957-b6e2-391582378ea3"
+            },
+            "target": {
+              "cell": "70be4301-5989-416d-a49a-66f617ae9057",
+              "port": "0c60b479-8cf5-452d-a823-d4b55d3972bf"
             },
             "vertices": []
           },
@@ -2113,6 +2262,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "DapEdu",
-    "threatTop": 2
+    "threatTop": 4
   }
 }
