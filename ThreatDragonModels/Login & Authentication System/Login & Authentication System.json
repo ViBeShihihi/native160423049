@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "75b4c004-0bb9-471b-bda4-7b7c6404fc6a",
             "zIndex": -1,
+            "id": "75b4c004-0bb9-471b-bda4-7b7c6404fc6a",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Untrusted",
@@ -71,8 +71,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "1c614dd6-e710-414c-add2-c2179acb8e02",
             "zIndex": -1,
+            "id": "1c614dd6-e710-414c-add2-c2179acb8e02",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Semi-trusted",
@@ -109,8 +109,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "fdbeaff5-c2ae-487e-8e0f-141cae19db16",
             "zIndex": -1,
+            "id": "fdbeaff5-c2ae-487e-8e0f-141cae19db16",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trusted",
@@ -153,8 +153,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "5a2a8ba1-0c3e-4368-8a27-2f10f60c88fc",
             "zIndex": -1,
+            "id": "5a2a8ba1-0c3e-4368-8a27-2f10f60c88fc",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trusted (restricted)",
@@ -197,6 +197,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -280,7 +281,6 @@
               ]
             },
             "id": "b105d7f8-d6cb-4c84-a1c2-769bfaa78d0e",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Mahasiswa",
@@ -314,6 +314,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -397,7 +398,6 @@
               ]
             },
             "id": "6cad6933-54f9-4992-8c3e-f53a2f54ea88",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Admininstrator",
@@ -425,12 +425,13 @@
               },
               "body": {
                 "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -514,7 +515,6 @@
               ]
             },
             "id": "4dad5f8b-ce16-4f19-8779-e9128164a33c",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Reverse Proxy",
@@ -1076,76 +1076,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "SQLi / brute force / IDOR",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "b617ad69-5185-4db2-bf53-5bb0e8649078",
-                  "title": "Injection dll",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 2,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "75b4c004-0bb9-471b-bda4-7b7c6404fc6a",
-                "1c614dd6-e710-414c-add2-c2179acb8e02"
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "SQLi / brute force / IDOR"
-            ],
-            "id": "fe10b7bc-d98b-49c4-ae12-401ef0d82f5d",
-            "source": {
-              "cell": "67511158-8661-4f31-8dd8-5c7c5df90865",
-              "port": "3f6b52bc-b03e-4217-a3c2-2115d94964a7"
-            },
-            "target": {
-              "cell": "4dad5f8b-ce16-4f19-8779-e9128164a33c",
-              "port": "1f9ac51a-e8fa-4ac9-ac8c-dde7bc5a7d26"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "dump akun",
               "description": "",
               "outOfScope": false,
@@ -1197,6 +1127,10 @@
               {
                 "x": 790,
                 "y": 430
+              },
+              {
+                "x": 820,
+                "y": 320
               }
             ]
           },
@@ -1271,6 +1205,89 @@
             "vertices": []
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SQLi / brute force / IDOR",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "b617ad69-5185-4db2-bf53-5bb0e8649078",
+                  "title": "Injection dll",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "9829552a-b0c9-467d-a1e2-3a1be2fdfa6f",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "75b4c004-0bb9-471b-bda4-7b7c6404fc6a",
+                "1c614dd6-e710-414c-add2-c2179acb8e02"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "SQLi / brute force / IDOR"
+            ],
+            "id": "fe10b7bc-d98b-49c4-ae12-401ef0d82f5d",
+            "source": {
+              "cell": "67511158-8661-4f31-8dd8-5c7c5df90865",
+              "port": "3f6b52bc-b03e-4217-a3c2-2115d94964a7"
+            },
+            "target": {
+              "cell": "4dad5f8b-ce16-4f19-8779-e9128164a33c",
+              "port": "1f9ac51a-e8fa-4ac9-ac8c-dde7bc5a7d26"
+            },
+            "vertices": []
+          },
+          {
             "position": {
               "x": 628.9999999999974,
               "y": 49.99999999999997
@@ -1291,6 +1308,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1374,7 +1392,6 @@
               ]
             },
             "id": "d8618bc2-62f5-4706-bcd7-da146761fd0c",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Autentikasi",
@@ -1411,6 +1428,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1507,8 +1525,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 12
+            }
           },
           {
             "position": {
@@ -1531,6 +1548,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1627,8 +1645,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 13
+            }
           },
           {
             "position": {
@@ -1651,6 +1668,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1747,8 +1765,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 14
+            }
           },
           {
             "position": {
@@ -1774,6 +1791,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1857,7 +1875,6 @@
               ]
             },
             "id": "cc4cfc68-0d8f-499f-a460-083149609e23",
-            "zIndex": 15,
             "data": {
               "type": "tm.Store",
               "name": "users",
@@ -1898,6 +1915,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -1981,7 +1999,6 @@
               ]
             },
             "id": "70be4301-5989-416d-a49a-66f617ae9057",
-            "zIndex": 16,
             "data": {
               "type": "tm.Store",
               "name": "mahasiswa",
@@ -2022,6 +2039,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -2105,7 +2123,6 @@
               ]
             },
             "id": "694aeef4-59f1-4ece-b233-bb73850b445e",
-            "zIndex": 17,
             "data": {
               "type": "tm.Store",
               "name": "nilai",
@@ -2143,6 +2160,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -2226,7 +2244,6 @@
               ]
             },
             "id": "67511158-8661-4f31-8dd8-5c7c5df90865",
-            "zIndex": 18,
             "data": {
               "type": "tm.Actor",
               "name": "Aktor ancaman",
@@ -2249,11 +2266,24 @@
                   "new": false,
                   "number": 1,
                   "score": ""
+                },
+                {
+                  "id": "ff7fc7f6-181a-4ef4-bdfe-d2d6fbd946b7",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 1,
-                "repudiation": 0
+                "repudiation": 1
               }
             }
           }
@@ -2262,6 +2292,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "DapEdu",
-    "threatTop": 4
+    "threatTop": 11
   }
 }
