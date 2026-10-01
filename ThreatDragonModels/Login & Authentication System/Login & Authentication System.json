@@ -1238,12 +1238,12 @@
               "threats": [
                 {
                   "id": "b617ad69-5185-4db2-bf53-5bb0e8649078",
-                  "title": "Injection dll",
+                  "title": "SQL Injection - Auth Bypass di Login",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Input pada form login tidak divalidasi, memungkinkan payload seperti admin' -- untuk bypass autentikasi tanpa kredensial valid.",
+                  "mitigation": "Prepared statement/parameterized query (bind_param), WAF (ModSecurity + OWASP CRS) di reverse proxy.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 2,
@@ -1251,12 +1251,12 @@
                 },
                 {
                   "id": "9829552a-b0c9-467d-a1e2-3a1be2fdfa6f",
-                  "title": "New STRIDE threat",
+                  "title": "Information Disclosure - Username Enumeration",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Pesan error login berbeda untuk username valid vs tidak valid, memudahkan penyerang memetakan akun yang ada sebelum brute force.",
+                  "mitigation": "Samakan pesan error (\"kredensial salah\") untuk semua kasus gagal login.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 10,
@@ -1268,8 +1268,8 @@
                 "1c614dd6-e710-414c-add2-c2179acb8e02"
               ],
               "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 1,
+                "tampering": 2,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -1285,7 +1285,27 @@
               "cell": "4dad5f8b-ce16-4f19-8779-e9128164a33c",
               "port": "1f9ac51a-e8fa-4ac9-ac8c-dde7bc5a7d26"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 300,
+                "y": 360
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
@@ -2285,13 +2305,6 @@
                 "spoofing": 2,
                 "repudiation": 2
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           }
         ]
