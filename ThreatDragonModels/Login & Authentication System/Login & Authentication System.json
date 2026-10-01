@@ -1887,11 +1887,13 @@
                 "text": "users"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1988,13 +1990,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "3f3a1ea4-41b3-46d6-b769-9d71d05af208",
+                  "title": "Information Disclosure - Dump Tabel Users",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Jika SQLi berhasil, seluruh kredensial (hash password, role) di tabel users dapat terekspos sekaligus.",
+                  "mitigation": "Enkripsi/hash kuat, least-privilege DB user, deteksi anomali query besar via WAF/log.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -2398,6 +2420,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Clarence",
-    "threatTop": 16
+    "threatTop": 17
   }
 }
