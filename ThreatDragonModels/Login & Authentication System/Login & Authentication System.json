@@ -2033,11 +2033,13 @@
                 "text": "mahasiswa"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2134,13 +2136,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "993899e2-297e-451b-878f-16f7e46e4642",
+                  "title": "Information Disclosure - PII Mahasiswa Bocor",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data pribadi (nama, NIM, kontak) berisiko ter-dump lewat chain SQLi/IDOR.",
+                  "mitigation": "Enkripsi data at-rest untuk kolom sensitif, access logging per query.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -2420,6 +2442,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Clarence",
-    "threatTop": 17
+    "threatTop": 18
   }
 }
