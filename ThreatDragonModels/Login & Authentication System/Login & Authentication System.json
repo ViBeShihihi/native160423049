@@ -1603,8 +1603,8 @@
                 "text": "Direktori\nmahasiswa search"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1701,12 +1701,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "f8f4558a-2f7a-4f01-9610-37294789054a",
+                  "title": "SQL Injection - Query Pencarian Tidak Ter-parameterisasi",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Input pencarian langsung dikonkatenasi ke query SQL tanpa sanitasi.",
+                  "mitigation": "Prepared statement; batasi jumlah hasil (pagination) untuk cegah resource-heavy query.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1723,8 +1745,8 @@
                 "text": "Panel Admin"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1821,12 +1843,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "74dafafa-a1a6-4981-911b-a93e4e75b9ba",
+                  "title": "Elevation of Privilege - Akses Admin Tanpa Otorisasi",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "User non-admin yang tahu URL /admin dapat langsung mengakses fitur admin tanpa dicegah di level aplikasi.",
+                  "mitigation": "Middleware RBAC di setiap route admin, bukan hanya sembunyikan link di UI.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -2354,6 +2398,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Clarence",
-    "threatTop": 14
+    "threatTop": 16
   }
 }
