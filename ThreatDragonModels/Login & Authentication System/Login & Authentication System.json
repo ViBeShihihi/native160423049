@@ -5,7 +5,7 @@
   "summary": {
     "title": "Login & Authentication System",
     "owner": "Vincent",
-    "description": "Sistem menangani autentikasi user melalui web app, terhubung ke Auth API dan database user. Termasuk proses login, session management, dan integrasi payment gateway.",
+    "description": "Sistem Portal Akademik menangani autentikasi mahasiswa dan admin melalui web app, terhubung ke reverse proxy, layanan backend (KHS, direktori mahasiswa, panel admin), dan database. Mencakup proses login, manajemen sesi, akses data akademik (nilai/KHS), dan pencarian direktori mahasiswa.",
     "id": 0
   },
   "detail": {
