@@ -2179,11 +2179,13 @@
                 "text": "nilai"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2280,13 +2282,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ca3c3fd7-8f79-42ae-bfdb-6d37df8fbdd9",
+                  "title": "Tampering - Perubahan Nilai Tidak Sah",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Jika akun DB app punya privilege write berlebih, nilai mahasiswa berpotensi diubah lewat jalur yang sama dengan read exploit.",
+                  "mitigation": "Prinsip least-privilege (akun app hanya punya privilege sesuai kebutuhan endpoint), audit trail perubahan nilai.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -2442,6 +2464,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Clarence",
-    "threatTop": 18
+    "threatTop": 19
   }
 }
