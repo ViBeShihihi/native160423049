@@ -2256,12 +2256,12 @@
               "threats": [
                 {
                   "id": "ac6a03f4-1946-4355-b7b8-c0f742817c7b",
-                  "title": "Attacker",
+                  "title": "Spoofing identitas pengguna sah",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Spoofing",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Penyerang mengambil alih atau menyamar sebagai mahasiswa/admin sah melalui credential stuffing, brute force, atau pencurian sesi.",
+                  "mitigation": "MFA (TOTP) di layer IAM, rate-limiting & lockout di percobaan login, regenerasi session ID setelah login.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
@@ -2282,7 +2282,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 1
               }
             }
