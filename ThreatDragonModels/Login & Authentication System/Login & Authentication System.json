@@ -1306,8 +1306,8 @@
                 "text": "Autentikasi"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1404,12 +1404,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "082204d3-71f4-41c2-b925-9e50f507e7a1",
+                  "title": "Weak Password Hashing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Password disimpan dengan hash MD5 tanpa salt, mudah di-crack lewat rainbow table jika DB bocor.",
+                  "mitigation": "Migrasi ke Argon2id (password_hash() PHP).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "6d95079c-e39a-44a4-b84b-db7528e4f794",
+                  "title": "Brute Force Login - Tidak Ada Rate Limit",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Tidak ada pembatasan percobaan login, memungkinkan automated brute force tanpa hambatan.",
+                  "mitigation": "Fail2ban (block IP setelah N percobaan gagal) + IAM dengan MFA.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2297,6 +2332,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Clarence",
-    "threatTop": 11
+    "threatTop": 13
   }
 }
