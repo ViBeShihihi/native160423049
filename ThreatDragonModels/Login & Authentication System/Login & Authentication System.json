@@ -2269,12 +2269,12 @@
                 },
                 {
                   "id": "ff7fc7f6-181a-4ef4-bdfe-d2d6fbd946b7",
-                  "title": "New STRIDE threat",
+                  "title": "Repudiation - tidak ada jejak aktivitas penyerang",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Karena tidak ada logging terpusat, aksi penyerang (termasuk yang berhasil) sulit dibuktikan/ditelusuri setelah insiden.",
+                  "mitigation": "Centralized logging (akses, login, query DB) dengan timestamp & source IP, retensi log, alerting otomatis.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
@@ -2283,8 +2283,15 @@
               ],
               "threatFrequency": {
                 "spoofing": 2,
-                "repudiation": 1
+                "repudiation": 2
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           }
         ]
