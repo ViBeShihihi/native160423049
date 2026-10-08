@@ -44,9 +44,9 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "f4b53b6d-cb41-4b68-8557-4f012a3f317a",
                 "44c007d6-3418-4b2f-8127-1f4a78cb5382",
-                "fe10b7bc-d98b-49c4-ae12-401ef0d82f5d"
+                "fe10b7bc-d98b-49c4-ae12-401ef0d82f5d",
+                "f4b53b6d-cb41-4b68-8557-4f012a3f317a"
               ],
               "containedElements": [
                 "b105d7f8-d6cb-4c84-a1c2-769bfaa78d0e",
@@ -80,13 +80,13 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "f4b53b6d-cb41-4b68-8557-4f012a3f317a",
                 "44c007d6-3418-4b2f-8127-1f4a78cb5382",
                 "9b226b5c-a192-41b6-8928-50780f3844aa",
                 "c5e695c2-3af8-475f-a4f3-7609ac4ceaf7",
                 "3a5b6c36-74c8-4a5b-8dea-e23066512f41",
                 "17a079c1-6dc2-42c5-a96d-34b31f11745e",
-                "fe10b7bc-d98b-49c4-ae12-401ef0d82f5d"
+                "fe10b7bc-d98b-49c4-ae12-401ef0d82f5d",
+                "f4b53b6d-cb41-4b68-8557-4f012a3f317a"
               ],
               "containedElements": [
                 "4dad5f8b-ce16-4f19-8779-e9128164a33c"
@@ -190,8 +190,8 @@
                 "text": "Mahasiswa"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -288,9 +288,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "736aee2b-fcbc-4d85-9329-2da9224a2f71",
+                  "title": "Spoofing - Session Hijacking",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Jika cookie sesi tidak diamankan (tanpa HttpOnly, Secure, SameSite) atau session ID tidak diregenerasi setelah login, penyerang bisa mencuri atau menetapkan sesi user sah.",
+                  "mitigation": "Cookie dengan flag HttpOnly, Secure, SameSite, session_regenerate_id setelah login, dan idle timeout.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -307,8 +325,8 @@
                 "text": "Admininstrator"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -405,9 +423,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "09d5469c-d6d8-4a2b-b731-e68f8f21b490",
+                  "title": "Spoofing - Session Hijacking",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Jika cookie sesi tidak diamankan (tanpa HttpOnly, Secure, SameSite) atau session ID tidak diregenerasi setelah login, penyerang bisa mencuri atau menetapkan sesi user sah.",
+                  "mitigation": "Cookie dengan flag HttpOnly, Secure, SameSite, session_regenerate_id setelah login, dan idle timeout.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -424,7 +460,7 @@
                 "text": "Reverse Proxy"
               },
               "body": {
-                "stroke": "#333333",
+                "stroke": "red",
                 "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
@@ -522,68 +558,35 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a239030f-77de-4c54-8308-4e7e40cf92bc",
+                  "title": "Information Disclosure - Server Banner Exposed",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Header default Nginx dan PHP membocorkan versi software, sehingga mempermudah reconnaissance (banner grabbing) dan pencocokan ke CVE yang diketahui.",
+                  "mitigation": "server_tokens off di Nginx, ServerTokens Prod dan hilangkan X-Powered-By di lapisan aplikasi.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Login",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "75b4c004-0bb9-471b-bda4-7b7c6404fc6a",
-                "1c614dd6-e710-414c-add2-c2179acb8e02"
-              ]
-            },
-            "labels": [
-              "Login"
-            ],
-            "id": "f4b53b6d-cb41-4b68-8557-4f012a3f317a",
-            "source": {
-              "cell": "b105d7f8-d6cb-4c84-a1c2-769bfaa78d0e",
-              "port": "3f6b52bc-b03e-4217-a3c2-2115d94964a7"
-            },
-            "target": {
-              "cell": "4dad5f8b-ce16-4f19-8779-e9128164a33c",
-              "port": "1f9ac51a-e8fa-4ac9-ac8c-dde7bc5a7d26"
-            },
-            "vertices": [
-              {
-                "x": 300,
-                "y": 250
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -1291,6 +1294,81 @@
               "port": "0c60b479-8cf5-452d-a823-d4b55d3972bf"
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "68011e60-3153-4c5e-8e1a-7b459ac6eaea",
+                  "title": "Information Disclosure - Kredensial Terkirim Tanpa Enkripsi (HTTP)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Jika komunikasi memakai HTTP biasa, username, password, dan cookie sesi dapat disadap atau dimodifikasi oleh pihak di jalur jaringan (sniffing, man-in-the-middle).",
+                  "mitigation": "TLS/HTTPS di Nginx, redirect 80 ke 443, dan HSTS.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "75b4c004-0bb9-471b-bda4-7b7c6404fc6a",
+                "1c614dd6-e710-414c-add2-c2179acb8e02"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Login"
+            ],
+            "id": "f4b53b6d-cb41-4b68-8557-4f012a3f317a",
+            "source": {
+              "cell": "b105d7f8-d6cb-4c84-a1c2-769bfaa78d0e",
+              "port": "3f6b52bc-b03e-4217-a3c2-2115d94964a7"
+            },
+            "target": {
+              "cell": "4dad5f8b-ce16-4f19-8779-e9128164a33c",
+              "port": "1f9ac51a-e8fa-4ac9-ac8c-dde7bc5a7d26"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 250
+              }
+            ]
           },
           {
             "position": {
@@ -2464,6 +2542,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Clarence",
-    "threatTop": 19
+    "threatTop": 23
   }
 }
